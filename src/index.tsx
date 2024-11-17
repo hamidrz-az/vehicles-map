@@ -1,16 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { VehicleProvider } from './context/VehicleContext';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <QueryClientProvider client={queryClient}>
+    <VehicleProvider>
+      <App />
+    </VehicleProvider>
+  </QueryClientProvider>
+</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
