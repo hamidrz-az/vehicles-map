@@ -19,7 +19,7 @@ const VehicleDetails: React.FC = () => {
       <h2 className="text-xl md:text-2xl font-bold text-blue-600 mb-4">
         Vehicle Details
       </h2>
-      <div className="text-base md:text-lg space-y-4 flex-grow">
+      <div className="text-base md:text-lg space-y-2 flex-grow">
         <p>
           <span className="font-semibold">Plate:</span> {selectedVehicle.plate}
         </p>
@@ -37,7 +37,7 @@ const VehicleDetails: React.FC = () => {
           {selectedVehicle.geoCoordinate.longitude}
         </p>
       </div>
-      <div className="text-sm md:text-base text-gray-400 mt-4">
+      <div className="text-sm md:text-base text-gray-400 mt-2">
         <p>Location ID: {selectedVehicle.locationId}</p>
         <p>VIN: {selectedVehicle.vin}</p>
       </div>
