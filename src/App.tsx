@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import VehicleList from './components/VehicleList';
 import MapWrapper from './components/Map';

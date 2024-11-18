@@ -20,15 +20,17 @@ const VehicleList: React.FC<VehicleListProps> = ({ vehicles }) => {
       vehicles.filter(
         (vehicle) =>
           vehicle.plate.toLowerCase().includes(lowercasedQuery) ||
-          vehicle.address.toLowerCase().includes(lowercasedQuery)
-      )
+          vehicle.address.toLowerCase().includes(lowercasedQuery),
+      ),
     );
   }, [searchQuery, vehicles]);
 
   // Scroll to the selected vehicle when it changes
   useEffect(() => {
     if (selectedVehicle) {
-      const selectedIndex = filteredVehicles.findIndex((v) => v.vin === selectedVehicle.vin);
+      const selectedIndex = filteredVehicles.findIndex(
+        (v) => v.vin === selectedVehicle.vin,
+      );
       if (selectedIndex !== -1 && listRef.current) {
         listRef.current.scrollToItem(selectedIndex, 'smart'); // Scroll to center the selected item
       }
@@ -70,7 +72,9 @@ const VehicleList: React.FC<VehicleListProps> = ({ vehicles }) => {
               onClick={() => setSelectedVehicle(vehicle)}
             >
               <span className="truncate w-1/2">{vehicle.plate}</span>
-              <span className="truncate w-1/2 text-right">{vehicle.address}</span>
+              <span className="truncate w-1/2 text-right">
+                {vehicle.address}
+              </span>
             </div>
           );
         }}

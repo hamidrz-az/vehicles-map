@@ -1,4 +1,3 @@
-// src/hooks/useVehicles.ts
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { Vehicle } from '../types/vehicle';
 

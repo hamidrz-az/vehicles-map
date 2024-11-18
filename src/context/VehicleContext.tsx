@@ -8,7 +8,9 @@ interface VehicleContextType {
 
 const VehicleContext = createContext<VehicleContextType | undefined>(undefined);
 
-export const VehicleProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const VehicleProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
 
   return (

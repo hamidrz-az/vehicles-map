@@ -1,8 +1,7 @@
-export interface GeoCoordinate {
+interface GeoCoordinate {
   latitude: number;
   longitude: number;
 }
-
 
 export interface Vehicle {
   vin: string; // Vehicle Identification Number
